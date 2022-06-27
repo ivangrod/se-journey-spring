@@ -21,7 +21,7 @@ configurations {
     }
 }
 
-val mainClassName = "com.ivangrod.xxx"
+val mainClassName = "org.ivangrod.domainevents.DomainEventsApplication"
 
 repositories {
     mavenCentral()
@@ -41,9 +41,10 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("com.diffplug.spotless:spotless-plugin-gradle:6.7.2")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.postgresql:postgresql")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-    implementation("org.springframework.boot:spring-boot-starter-amqp")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
 
     implementation("org.apache.commons:commons-text:1.9")
@@ -51,7 +52,6 @@ dependencies {
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("org.springframework.amqp:spring-rabbit-test")
     testImplementation("org.junit.jupiter:junit-jupiter-api")
     testImplementation("org.assertj:assertj-core")
     testImplementation("org.junit.platform:junit-platform-runner")
